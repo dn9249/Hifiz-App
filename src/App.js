@@ -10,18 +10,18 @@ function App() {
   return (
     <Router>
       <nav>
-        <Link to="/"> Home </Link>
-        <Link to="/login"> Login </Link>
+        <Link to="/home"> Home </Link>
+        <Link to="/"> Login </Link>
         <Link to="/add"> Add </Link>
         <Link to="/remove"> Remove </Link>
         <Link to="/grades"> Grades </Link>
       </nav>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/add" element={<Add />} />
         <Route path="/remove" element={<Remove />} />
         <Route path="/grades" element={<Grades />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
       </Routes>
     </Router>
   );
