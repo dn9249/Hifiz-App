@@ -28,18 +28,18 @@ function App() {
           <Link to="/"> Login </Link>
         ) : (
           <>
+            <Link to="/remove"> Remove </Link>
+            <Link to="/add"> Add </Link>
+            <Link to="/grades"> Grades </Link>
             <button onClick={signUserOut}> Log Out</button>
           </>
         )}
-        <Link to="/add"> Add </Link>
-        <Link to="/remove"> Remove </Link>
-        <Link to="/grades"> Grades </Link>
       </nav>
       <Routes>
         <Route path="/home" element={<Home />} />
-        <Route path="/add" element={<Add />} />
-        <Route path="/remove" element={<Remove />} />
-        <Route path="/grades" element={<Grades />} />
+        <Route path="/add" element={<Add isAuth={isAuth}/>} />
+        <Route path="/remove" element={<Remove isAuth={isAuth}/>} />
+        <Route path="/grades" element={<Grades isAuth={isAuth}/>} />
         <Route path="/" element={<Login setIsAuth={setIsAuth} />} />
       </Routes>
     </Router>
