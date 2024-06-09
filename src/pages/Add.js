@@ -8,11 +8,11 @@ function Add({ isAuth }) {
     const [firstName, setfirstName] = useState("");
     const [lastName, setlastName] = useState("");
   
-    const postsCollectionRef = collection(db, "student");
+    const sudentCollectionRef = collection(db, "student");
     let navigate = useNavigate();
   
     const addStudent = async () => {
-      await addDoc(postsCollectionRef, {
+      await addDoc(sudentCollectionRef, {
         firstName,
         lastName
       });
