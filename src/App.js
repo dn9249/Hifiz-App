@@ -7,7 +7,7 @@ import Remove from "./pages/Remove";
 import Login from "./pages/Login";
 import { useState } from "react";
 import { signOut } from "firebase/auth";
-import { auth } from "./firebase-config";
+import { auth } from "./Firebase/firebase-config";
 
 function App() {
   const [isAuth, setIsAuth] = useState(false);
